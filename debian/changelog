@@ -1,5 +1,44 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-go-jose-go-jose.v3 (3.0.3-6) unstable; urgency=medium
 
-  * Initial release
+  * Fixup the previous revision
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Reinhard Tartler <siretart@tauware.de>  Mon, 24 Jun 2024 15:16:08 -0400
+
+golang-github-go-jose-go-jose.v3 (3.0.3-5) unstable; urgency=medium
+
+  * Remove test that times out on some architectures
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sun, 23 Jun 2024 06:09:10 -0400
+
+golang-github-go-jose-go-jose.v3 (3.0.3-4) unstable; urgency=medium
+
+  * Drop "fix-import-paths.patch" to not require downstream packages
+    to adjust their import paths
+  * Add myself to uploaders
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sat, 22 Jun 2024 19:10:16 -0400
+
+golang-github-go-jose-go-jose.v3 (3.0.3-3) unstable; urgency=medium
+
+  * Re-Upload to debian again as v3, Closes: #1072393
+  * While upstream really prefers projects to move to the v4 branch, that
+    branch requires significant changes to applications. In Debian, we still
+    have a number of packages depending on the v2 branch, which is out of
+    maintenance. Moving them over to v3 is more expedient than waiting
+    for upstreams to port over to v4.
+  * Drop patches, fixed upstream
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sat, 01 Jun 2024 12:19:41 -0400
+
+golang-github-go-jose-go-jose (3.0.1-2) unstable; urgency=medium
+
+  * Team Upload.
+    + Source-only upload.
+
+ -- Nilesh Patra <nilesh@debian.org>  Sat, 23 Dec 2023 13:36:39 +0530
+
+golang-github-go-jose-go-jose (3.0.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #1056342)
+
+ -- Bo YU <tsu.yubo@gmail.com>  Thu, 21 Dec 2023 22:46:34 +0530
