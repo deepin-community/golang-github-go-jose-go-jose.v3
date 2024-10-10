@@ -1,4 +1,13 @@
 #!/usr/bin/make -f
 
+VERSION := $(shell dpkg-parsechangelog -Sversion | cut -d- -f1)
+DEBDATE := $(shell dpkg-parsechangelog -Sdate | date -u +"%F" -f -)
+
+export DH_GOLANG_EXCLUDES := jose-util jwk-keygen
+
 %:
-	dh $@
+	dh $@ --builddirectory=_build --buildsystem=golang --with=golang
+
+execute_before_dh_installman:
+	txt2man -s 1 -v "jose-util" -t "jose-util" \
+	-r "$(VERSION)" -d "$(DEBDATE)" debian/manpage/jose-util.txt > debian/manpage/jose-util.1
