@@ -1,3 +1,13 @@
+golang-github-go-jose-go-jose.v3 (3.0.3-6deepin1) unstable; urgency=medium
+
+  * fix: CVE-2026-34986 - prevent panic on empty JWE encrypted key
+    - Add nil recipient check in decryptKey
+    - Add empty encrypted key validation
+    - Add length check in KeyUnwrap to prevent panic
+    Upstream: https://github.com/go-jose/go-jose/commit/02464163e1e891db85257cb8860978a1c0226016
+
+ -- hudeng <hudeng@deepin.org>  Tue, 29 Apr 2026 12:15:00 +0800
+
 golang-github-go-jose-go-jose.v3 (3.0.3-6) unstable; urgency=medium
 
   * Fixup the previous revision
