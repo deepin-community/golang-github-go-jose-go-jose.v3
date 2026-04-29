@@ -1,1 +1,2 @@
 remove-TestOpaqueKeyRoundtripJWE.patch
+CVE-2026-34986.patch
